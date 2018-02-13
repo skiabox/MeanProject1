@@ -18,10 +18,6 @@
   ],
   "angularCompilerOptions": {
     "skipMetadataEmit": true
-  },
-  "exclude": [
-    "node_modules",
-    "public/js",
-    "assets/app/polyfills.ts"
-  ]
+  }
+
 }
