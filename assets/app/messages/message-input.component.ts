@@ -9,7 +9,7 @@ import {NgForm} from "@angular/forms";
 })
 export class MessageInputComponent implements OnInit{
 
-    private message: Message;
+    public message: Message | null;
 
     constructor(private messageService: MessageService) {}
 
