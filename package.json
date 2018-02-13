@@ -1,0 +1,49 @@
+{
+  "name": "meanproject1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch --display-error-details",
+    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'assets/app/**/*.js' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.*'"
+  },
+  "dependencies": {
+    "@angular/animations": "^5.2.4",
+    "@angular/common": "^5.2.4",
+    "@angular/compiler": "^5.2.4",
+    "@angular/compiler-cli": "^5.2.4",
+    "@angular/core": "^5.2.4",
+    "@angular/forms": "^5.2.4",
+    "@angular/http": "^5.2.4",
+    "@angular/platform-browser": "^5.2.4",
+    "@angular/platform-browser-dynamic": "^5.2.4",
+    "@angular/platform-server": "^5.2.4",
+    "@angular/router": "^5.2.4",
+    "@angular/upgrade": "^5.2.4",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "core-js": "^2.5.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "hbs": "~4.0.1",
+    "morgan": "~1.9.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.6",
+    "serve-favicon": "~2.4.5",
+    "zone.js": "^0.8.20"
+  },
+  "devDependencies": {
+    "@ngtools/webpack": "^1.9.8",
+    "@types/core-js": "^0.9.46",
+    "@types/node": "^9.4.5",
+    "angular-router-loader": "^0.8.2",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.4.1",
+    "del-cli": "^1.1.0",
+    "html-loader": "^0.5.5",
+    "raw-loader": "^0.5.1",
+    "typescript": "^2.7.1",
+    "webpack": "^3.11.0",
+    "webpack-merge": "^4.1.1"
+  }
+}

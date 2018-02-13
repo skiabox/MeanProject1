@@ -1,0 +1,14 @@
+<article class="card mb-2 bg-light">
+    <header class="card-header" [ngStyle]="{backgroundColor: color}" (mouseenter)="color = 'green'">
+        <p class="card-text">{{ message.content }}</p>
+    </header>
+    <div class="card-body d-flex justify-content-between">
+        <div class="italic_style card-text">
+            {{ message.username }}
+        </div>
+        <div *ngIf="belongsToUser()">
+            <a tabindex="0" class="card-link" (click)="onEdit()">Edit</a>
+            <a tabindex="0" class="card-link" (click)="onDelete()">Delete</a>
+        </div>
+    </div>
+</article>
